@@ -8,25 +8,27 @@ class monetizar extends HTMLElement {
     }
     render(){
         this.innerHTML = /* html*/ `
-        <h1 class="tittle">¿Como monetizar tu app?</h1>
-        <section id="monetizarShow"class="container">
-            
-            <button id="monetizarOption1"class="container_option">
-                <img src="RecursosExamen/answer-4-1.png">
-                <h3>Aplicacion gratuita con publicidad</h3>
-            </button>
-            <button id="monetizarOption2"class="container_option">
-                <img src="RecursosExamen/answer-4-2.png">
-                <h3>Aplicacion de pago</h3>
-            </button>
-            <button id="monetizarOption3"class="container_option">
-                <img src="RecursosExamen/answer-4-3.png">
-                <h3>Compras dentro de la app</h3>
-            </button>
-            <button id="monetizarOption4"class="container_option">
-                <img src="RecursosExamen/answer-4-4.png">
-                <h3>Otros / No lo se todavia</h3>
-            </button>
+        <section id="monetizarShow"> 
+            <h1 class="tittle">¿Como monetizar tu app?</h1>
+            <div class="container">
+                
+                <button id="monetizarOption1"class="container_option">
+                    <img src="RecursosExamen/answer-4-1.png">
+                    <h3>Aplicacion gratuita con publicidad</h3>
+                </button>
+                <button id="monetizarOption2"class="container_option">
+                    <img src="RecursosExamen/answer-4-2.png">
+                    <h3>Aplicacion de pago</h3>
+                </button>
+                <button id="monetizarOption3"class="container_option">
+                    <img src="RecursosExamen/answer-4-3.png">
+                    <h3>Compras dentro de la app</h3>
+                </button>
+                <button id="monetizarOption4"class="container_option">
+                    <img src="RecursosExamen/answer-4-4.png">
+                    <h3>Otros / No lo se todavia</h3>
+                </button>
+            <div>
         </section>
         `
     }

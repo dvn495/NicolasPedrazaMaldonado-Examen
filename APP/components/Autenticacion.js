@@ -8,24 +8,26 @@ class autenticacion extends HTMLElement {
     }
     render(){
         this.innerHTML = /* html*/ `
-        <h1 class="tittle">Tu sistema necesita autenticacion?</h1>
-        <section id="autenticacionShow"class="container">   
-            <button href="#"id="autenticacionOption1"class="container_option">
-                <img src="RecursosExamen/answer-5-1.png">
-                <h3>Si, con redes sociales y email</h3>
-            </button>
-            <button id="autenticacionOption2" class="container_option">
-                <img src="RecursosExamen/answer-5-2.png">
-                <h3>Si, con email</h3>
-            </button>
-            <button id="autenticacionOption3" class="container_option">
-                <img src="RecursosExamen/answer-5-3.png"> 
-                <h3>No</h3>
-            </button>
-            <button id="autenticacionOption4" class="container_option">
-                <img src="RecursosExamen/answer-5-4.png"> 
-                <h3>No lo se todavia</h3>
-            </button>
+        <section id="autenticacionShow">
+            <h1 class="tittle">Tu sistema necesita autenticacion?</h1>
+            <div class="container">   
+                <button href="#"id="autenticacionOption1"class="container_option">
+                    <img src="RecursosExamen/answer-5-1.png">
+                    <h3>Si, con redes sociales y email</h3>
+                </button>
+                <button id="autenticacionOption2" class="container_option">
+                    <img src="RecursosExamen/answer-5-2.png">
+                    <h3>Si, con email</h3>
+                </button>
+                <button id="autenticacionOption3" class="container_option">
+                    <img src="RecursosExamen/answer-5-3.png"> 
+                    <h3>No</h3>
+                </button>
+                <button id="autenticacionOption4" class="container_option">
+                    <img src="RecursosExamen/answer-5-4.png"> 
+                    <h3>No lo se todavia</h3>
+                </button>ç
+            </div>
         </section>
         `
     }

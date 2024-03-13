@@ -44,5 +44,5 @@ const postData = async (datos) => {
     }
 }
 export {
-    deleteData as deleteData, getData as getData, postData as postDatas, updateData as updateData, getElementData as getElementData
-};
+    getData as getData, postData as postData, //updateData as updateData
+}

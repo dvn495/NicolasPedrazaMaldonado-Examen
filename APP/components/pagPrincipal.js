@@ -1,4 +1,4 @@
-import {postData} from "../../API/APIs"
+import {getData, postData} from "../../API/APIs.js"
 
 
 class pagPrincipal extends HTMLElement {
@@ -20,17 +20,41 @@ class pagPrincipal extends HTMLElement {
         `
     }
     selection() {
-        const start = document.querySelector('#start')
-        start.addEventListener('click', function(){
-            document.querySelector('#principal').style.display='none'
-            const data= {
-                name: " ",
-                contact: 0,
-                email: " ",
-                cotizacion: 0 
-            }
-            postData(data)
+        addEventListener("DOMContentLoaded", () => {
+            const start = document.querySelector('#start')
+            start.addEventListener('click', function(){
+                getData()
+                    .then((response)=>{
+                        if(response.ok){
+                            return response.json();
+                        } else {
+                            throw new Error('error')
+                        }
+                    })
+                    .then((responseData)=> {
+                        let generatedID = (responseData.length + 1)
+                        const data= {
+                            id: generatedID,
+                            name: " ",
+                            contact: 0,
+                            email: " ",
+                            cotizacion: 0 
+                        }
+                        postData(data)
+                        
+                    })
+                    document.querySelector('#principal').style.display='none'
+                    
+                    
+                
+            })
         })
+        
     }
+    
+}
+function passID(generatedID){
+    return generatedID
 }
 customElements.define("pag-principal", pagPrincipal);
+export{passID as id}

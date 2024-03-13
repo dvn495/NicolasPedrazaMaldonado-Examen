@@ -8,25 +8,27 @@ class typeApp extends HTMLElement {
     }
     render(){
         this.innerHTML = /* html*/ `
-        <h1 class="tittle">¿Que tipo de app necesta?</h1>
-        <section id="typeShow"class="container">
-            
-            <button href="#"id="typeOption1"class="container_option">
-                <img src="RecursosExamen/answer-2-1.png">
-                <h3>Aplicacion Andriod</h3>
-            </button>
-            <button id="typeOption2" class="container_option">
-                <img src="RecursosExamen/answer-2-2.png">
-                <h3>Aplicacion IOS</h3>
-            </button>
-            <button id="typeOption3" class="container_option">
-                <img src="RecursosExamen/answer-2-3.png"> 
-                <h3>APlicacion Windows Phone</h3>
-            </button>
-            <button id="typeOption4" class="container_option">
-                <img src="RecursosExamen/answer-2-4.png"> 
-                <h3>Aplicacion Andriod + IOS</h3>
-            </button>
+        <section id="typeShow">
+            <h1 class="tittle">¿Que tipo de app necesta?</h1>
+            <div class="container">
+                
+                <button href="#"id="typeOption1"class="container_option">
+                    <img src="RecursosExamen/answer-2-1.png">
+                    <h3>Aplicacion Andriod</h3>
+                </button>
+                <button id="typeOption2" class="container_option">
+                    <img src="RecursosExamen/answer-2-2.png">
+                    <h3>Aplicacion IOS</h3>
+                </button>
+                <button id="typeOption3" class="container_option">
+                    <img src="RecursosExamen/answer-2-3.png"> 
+                    <h3>APlicacion Windows Phone</h3>
+                </button>
+                <button id="typeOption4" class="container_option">
+                    <img src="RecursosExamen/answer-2-4.png"> 
+                    <h3>Aplicacion Andriod + IOS</h3>
+                </button>
+            </div>
         </section>
         `
     }

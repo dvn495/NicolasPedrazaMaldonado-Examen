@@ -8,25 +8,27 @@ class desingApp extends HTMLElement {
     }
     render(){
         this.innerHTML = /* html*/ `
-        <h1 class="tittle">¿Que diseño quieres que tenga tu App?</h1>
-        <section id="desingShow"class="container">
-            
-            <button id="desingOption1"class="container_option">
-                <img src="RecursosExamen/answer-3-1.png">
-                <h3>Interfaz sencilla</h3>
-            </button>
-            <button id="desingOption2" class="container_option">
-                <img src="RecursosExamen/answer-3-2.png">
-                <h3>Interfaz personalizada</h3>
-            </button>
-            <button id="desingOption3" class="container_option">
-                <img src="RecursosExamen/answer-3-3.png"> 
-                <h3>Interfaz replicada de la web</h3>
-            </button>
-            <button id="desingOption3" class="container_option">
-                <img src="RecursosExamen/answer-3-4.png"> 
-                <h3>No necesito diseño</h3>
-            </button>
+        <section id="desingShow">
+            <h1 class="tittle">¿Que diseño quieres que tenga tu App?</h1>
+            <div class="container">
+                
+                <button id="desingOption1"class="container_option">
+                    <img src="RecursosExamen/answer-3-1.png">
+                    <h3>Interfaz sencilla</h3>
+                </button>
+                <button id="desingOption2" class="container_option">
+                    <img src="RecursosExamen/answer-3-2.png">
+                    <h3>Interfaz personalizada</h3>
+                </button>
+                <button id="desingOption3" class="container_option">
+                    <img src="RecursosExamen/answer-3-3.png"> 
+                    <h3>Interfaz replicada de la web</h3>
+                </button>
+                <button id="desingOption4" class="container_option">
+                    <img src="RecursosExamen/answer-3-4.png"> 
+                    <h3>No necesito diseño</h3>
+                </button>
+            <div>
         </section>
         `
     }
