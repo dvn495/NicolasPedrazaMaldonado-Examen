@@ -1,0 +1,7 @@
+import "/APP/components/pagPrincipal.js"
+import "/APP/components/nivelCalidad.js"
+import "/APP/components/diseñoApp.js"
+import "/APP/components/monetizar.js"
+import "/APP/components/Autenticacion.js"
+import "/APP/components/resumen.js"
+import "/APP/components/tipoApp.js"
