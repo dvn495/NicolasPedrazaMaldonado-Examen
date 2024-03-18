@@ -1,4 +1,4 @@
-import {getData, postData} from "../../API/APIs.js"
+import {newId, postData, getId} from "../../API/APIs.js"
 
 
 class pagPrincipal extends HTMLElement {
@@ -20,41 +20,21 @@ class pagPrincipal extends HTMLElement {
         `
     }
     selection() {
-        addEventListener("DOMContentLoaded", () => {
-            const start = document.querySelector('#start')
-            start.addEventListener('click', function(){
-                getData()
-                    .then((response)=>{
-                        if(response.ok){
-                            return response.json();
-                        } else {
-                            throw new Error('error')
-                        }
-                    })
-                    .then((responseData)=> {
-                        let generatedID = (responseData.length + 1)
-                        const data= {
-                            id: generatedID,
-                            name: " ",
-                            contact: 0,
-                            email: " ",
-                            cotizacion: 0 
-                        }
-                        postData(data)
-                        
-                    })
-                    document.querySelector('#principal').style.display='none'
+        const start = this.querySelector('#start'); // Use `this` to refer to the current instance of the class
+        start.addEventListener('click', async (e) => { // Receive `e` as a parameter here
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            try {
+                let generatedID = await newId(); // Wait for the promise to resolve
+                console.log(generatedID);
                     
-                    
-                
-            })
-        })
-        
+                 // Wait for the post request to complete
+                document.querySelector('#principal').style.display = 'none';
+            } catch (error) {
+                console.error('Error:', error.message);
+            }
+        });
     }
     
 }
-function passID(generatedID){
-    return generatedID
-}
 customElements.define("pag-principal", pagPrincipal);
-export{passID as id}

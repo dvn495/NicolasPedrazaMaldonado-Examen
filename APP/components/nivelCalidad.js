@@ -1,4 +1,4 @@
-import {getData} from "../../API/APIs.js"
+import {getUserData} from "../../API/APIs.js"
 
 class qualityLevel extends HTMLElement {
     constructor() {
@@ -34,9 +34,15 @@ class qualityLevel extends HTMLElement {
             option1.addEventListener('click', function(){
                 console.log('si')
                 container.style.display='none'
-                const id = (id) =>{
-
-                }
+                getUserData()
+                    .then((response)=>{
+                        if(response.ok){
+                            console.log(response)
+                            return response.json();
+                        } else {
+                            throw new Error('error')
+                        }
+                    })
             })
             const option2 = document.querySelector('#qualityOption2')
             option2.addEventListener('click', function(){
